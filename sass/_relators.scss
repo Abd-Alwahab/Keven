@@ -1,0 +1,45 @@
+.realtours {
+    background-image: linear-gradient(#000,#222);
+    grid-column: col-start 7 / -1;
+    padding: 3rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 2rem;
+    justify-items: center;
+
+    
+@media only screen and (max-width:$meduim) {
+    
+        grid-column: 1 / -1;
+}
+
+    &__list {
+
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+        
+    }
+
+
+    &__img {
+
+        width: 7rem;
+        display: block;
+        border-radius: 50%;
+
+    }
+
+    &__text {
+        color: #fff;
+    }
+
+    &__sold {
+        font-size: 1.4rem;
+    }
+
+
+}

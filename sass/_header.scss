@@ -1,0 +1,69 @@
+.header {
+    
+    background-image:linear-gradient(rgba(0, 0, 0, 0.671),rgba(0, 0, 0, 0.699)), url(../img/gall-4.jpeg);
+    background-size: cover;
+    
+    grid-column: full-start / col-end 6 ;
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem,min-content) 1fr;
+    grid-template-columns: minmax(min-content,max-content);
+    grid-gap: 1.5rem;
+    padding: 8rem;
+    padding-top: 4rem;
+    justify-content: center; 
+
+    
+    @media only screen and (max-width:$meduim) {
+    
+        grid-column: 1 / -1;
+        
+    }
+
+
+    &__logo {
+        height: 7rem;
+        justify-self: center;
+    }
+
+
+    &__btn {
+        justify-self: start;
+        align-self: start;
+    }
+
+    &__text {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+        font-size: 1.6rem;
+        color:#fff;
+
+        &::before,
+        &::after {
+
+            content: "";
+            height: 1px;
+            background-color: currentColor;
+            display: block;
+        }
+
+
+    }
+
+
+    &__logos {
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
+        align-items: center;
+        svg {
+            max-height: 4.5rem;
+            max-width: 100%;
+            fill: #555;
+            
+        }
+    }
+}
